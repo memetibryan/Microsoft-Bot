@@ -1,0 +1,22 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "A highly tech Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memetibryan/Bot.git"
+  },
+  "keywords": [
+    "BMB"
+  ],
+  "author": "Bryan Memeti (memetibryan@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/memetibryan/Bot/issues"
+  },
+  "homepage": "https://github.com/memetibryan/Bot#readme"
+}
