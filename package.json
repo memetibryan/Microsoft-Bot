@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/memetibryan/Bot/issues"
   },
-  "homepage": "https://github.com/memetibryan/Bot#readme"
+  "homepage": "https://github.com/memetibryan/Bot#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "botbuilder": "^3.11.0",
+    "express": "^4.16.2"
+  }
 }
