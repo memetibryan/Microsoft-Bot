@@ -19,181 +19,122 @@
 </header>
 
 <body>
-    <div class="container app">
-        <div class="row app-one">
-            <div class="col-sm-4 side">
-                <div class="side-one">
-                    <!-- Heading -->
-                    <div class="row heading">
-                        <div class="col-sm-3 col-xs-3 heading-avatar">
-                            <div class="heading-avatar-icon">
-                                <img src="./resources/images/bot.png">
-                            </div>
-                        </div>
-                        <div class="col-sm-1 col-xs-1  heading-dot  pull-right">
-                            <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-sm-2 col-xs-2 heading-compose  pull-right">
-                            <i class="fa fa-comments fa-2x  pull-right" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <!-- Heading End -->
-                    <!-- SearchBox -->
-                    <div class="row searchBox">
-                        <div class="col-sm-12 searchBox-inner">
-                            <div class="form-group has-feedback">
-                                <input id="searchText" type="text" class="form-control" name="searchText" placeholder="Search">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Search Box End -->
-                    <!-- sideBar -->
-                    <div class="row sideBar">
-                        <div class="row sideBar-body">
-                            <div class="col-sm-3 col-xs-3 sideBar-avatar">
-                                <div class="avatar-icon">
-                                    <img src="./resources/images/me.jpg">
-                                </div>
-                            </div>
-                            <div class="col-sm-9 col-xs-9 sideBar-main">
-                                <div class="row">
-                                    <div class="col-sm-8 col-xs-8 sideBar-name">
-                                        <span class="name-meta">Bryan Memeti
-                  </span>
-                                    </div>
-                                    <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
-                                        <span id="time" class="time-meta pull-right">
-                  </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Sidebar End -->
-                    </div>
-                    <div class="side-two">
-                        <!-- Heading -->
-                        <div class="row newMessage-heading">
-                            <div class="row newMessage-main">
-                                <div class="col-sm-2 col-xs-2 newMessage-back">
-                                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                                </div>
-                                <div class="col-sm-10 col-xs-10 newMessage-title">
-                                    New Chat
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Heading End -->
-                        <!-- ComposeBox -->
-                        <div class="row composeBox">
-                            <div class="col-sm-12 composeBox-inner">
-                                <div class="form-group has-feedback">
-                                    <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Search People">
-                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ComposeBox End -->
-                        <!-- sideBar -->
-                        <div class="row compose-sideBar">
-                            <div class="row sideBar-body">
-                                <div class="col-sm-3 col-xs-3 sideBar-avatar">
-                                    <div class="avatar-icon">
-                                        <img src="./resources/images/me.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-sm-9 col-xs-9 sideBar-main">
-                                    <div class="row">
-                                        <div class="col-sm-8 col-xs-8 sideBar-name">
-                                            <span class="name-meta">Bryan Memeti
-                  </span>
-                                        </div>
-                                        <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
-                                            <span class="time-meta pull-right">
-                  </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Sidebar End -->
-                        </div>
-                        <!-- New Message Sidebar End -->
-                        <!-- Conversation Start -->
-                        <div class="col-sm-8 conversation">
-                            <!-- Heading -->
-                            <div class="row heading">
-                                <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
-                                    <div class="heading-avatar-icon">
-                                        <img src="./resources/images/me.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 col-xs-7 heading-name">
-                                    <a class="heading-name-meta">Bryan Memeti
-            </a>
-                                    <span class="heading-online">Online</span>
-                                </div>
-                                <div class="col-sm-1 col-xs-1  heading-dot pull-right">
-                                    <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <!-- Heading End -->
-                            <!-- Message Box -->
-                            <div class="row message" id="conversation">
-                                <div class="row message-previous">
-                                    <div class="col-sm-12 previous">
-                                        <a onclick="previous(this)" id="ankitjain28" name="20">
-              Show Previous Message!
-              </a>
-                                    </div>
-                                </div>
-                                <div class="row message-body">
-                                    <div class="col-sm-12 message-main-receiver">
-                                        <div class="receiver">
-                                            <div class="message-text">
-                                                Hyy, Its Awesome..!
-                                            </div>
-                                            <span class="message-time pull-right">
-                  Sun
-                </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row message-body">
-                                    <div class="col-sm-12 message-main-sender">
-                                        <div class="sender">
-                                            <div class="message-text">
-                                                Thanks n I know its awesome...!
-                                            </div>
-                                            <span class="message-time pull-right">
-                  Sun
-                </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Message Box End -->
-                            <!-- Reply Box -->
-                            <div class="row reply">
-                                <div class="col-sm-1 col-xs-1 reply-emojis">
-                                    <i class="fa fa-smile-o fa-2x"></i>
-                                </div>
-                                <div class="col-sm-9 col-xs-9 reply-main">
-                                    <textarea class="form-control" rows="1" id="comment"></textarea>
-                                </div>
-                                <div class="col-sm-1 col-xs-1 reply-recording">
-                                    <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
-                                </div>
-                                <div class="col-sm-1 col-xs-1 reply-send">
-                                    <i class="fa fa-send fa-2x" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <!-- Reply Box End -->
-                        </div>
-                        <!-- Conversation End -->
-                    </div>
-                    <!-- App One End -->
-                </div>
-                <!-- App End -->
+    <div class="menu">
+            <div class="back"><i class="fa fa-chevron-left"></i> <img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+            <div class="name">Alex</div>
+            <div class="last">18:09</div>
+        </div>
+    <ol class="chat">
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Hola!</p>
+        <p>Te vienes a cenar al centro? <emoji class="pizza"/></p>
+        <time>20:17</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Puff...</p>
+        <p>Aún estoy haciendo el contexto de Góngora... <emoji class="books"/></p>
+        <p>Mejor otro día</p>
+        <time>20:18</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Qué contexto de Góngora? <emoji class="suffocated"/></p>
+        <time>20:18</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>El que mandó Marialu</p>
+        <p>Es para mañana...</p>
+        <time>20:18</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p><emoji class="scream"/></p>
+        <p>Pásamelo! <emoji class="please"/></p>
+        <time>20:18</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <img src="https://i.imgur.com/QAROObc.jpg" draggable="false"/>
+        <time>20:19</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Gracias! <emoji class="hearth_blue"/></p>
+        <time>20:20</time>
+      </div>
+    </li>
+        <div class="day">Hoy</div>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Te apetece jugar a Minecraft?</p>
+        <time>18:03</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Venga va, hace ya mucho que no juego...</p>
+        <time>18:07</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Ehh, me crashea el Launcher... <emoji class="cryalot"/></p>
+        <time>18:08</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p><emoji class="lmao"/></p>
+        <time>18:08</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Es broma</p>
+        <p>Ataque Moai!</p>
+        <p><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span></p>
+        <time>18:09</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+          <p>Copón</p>
+        <p><emoji class="funny"/></p>
+        <time>18:08</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Hey there's a new update about this chat UI with more responsive elements! Check it now:</p>
+        <p><a href="https://codepen.io/Varo/pen/YPmwpQ" target="parent">Chat UI 2.0</a></p>
+        <time>18:09</time>
+      </div>
+    </li>
+    </ol>
+    <input class="textarea" type="text" placeholder="Type here!"/><div class="emojis"></div>
 </body>
 
 </html>
