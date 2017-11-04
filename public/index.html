@@ -1,65 +1,177 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bot Chat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/4.6.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/4.6.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/4.6.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/4.6.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/4.6.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Font Awesome File -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<header>
+    <script src="/index.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="/style.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCQbrJx83iiSy0mBRMRJ0IBtELCTKLqwEY",
+        authDomain: "tech-bot-1009e.firebaseapp.com",
+        databaseURL: "https://tech-bot-1009e.firebaseio.com",
+        projectId: "tech-bot-1009e",
+        storageBucket: "",
+        messagingSenderId: "367232255693"
+    };
+    firebase.initializeApp(config);
     </script>
-  </body>
+</header>
+
+<body>
+    <div class="menu">
+        <div class="back"><i class="fa fa-chevron-left"></i> <img src="./resources/images/me.jpg" draggable="false" /></div>
+        <div class="name">Bryan Memeti</div>
+        <div id="time" class="last"></div>
+    </div>
+    <ol class="chat">
+        <li class="other">
+            <div class="avatar"><img src="./resources/images/me.jpg" draggable="false" /></div>
+            <div class="msg">
+                <p>Hola!</p>
+                <p>Te vienes a cenar al centro?
+                    <emoji class="pizza" />
+                </p>
+                <time>20:17</time>
+            </div>
+        </li>
+        <li class="self">
+            <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false" /></div>
+            <div class="msg">
+                <p>Puff...</p>
+                <p>Aún estoy haciendo el contexto de Góngora...
+                    <emoji class="books" />
+                </p>
+                <p>Mejor otro día</p>
+                <time>20:18</time>
+            </div>
+        </li>
+        <li class="other">
+            <div class="avatar"><img src="./resources/images/me.jpg" draggable="false" /></div>
+            <div class="msg">
+                <p>Qué contexto de Góngora?
+                    <emoji class="suffocated" />
+                </p>
+                <time>20:18</time>
+            </div>
+        </li>
+        <li class="self">
+            <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false" /></div>
+            <div class="msg">
+                <p>El que mandó Marialu</p>
+                <p>Es para mañana...</p>
+                <time>20:18</time>
+            </div>
+        </li>
+        <li class="other">
+            <div class="avatar"><img src="./resources/images/me.jpg" draggable="false" /></div>
+            <div class="msg">
+                <p>
+                    <emoji class="scream" />
+                </p>
+                <p>Pásamelo!
+                    <emoji class="please" />
+                </p>
+                <time>20:18</time>
+            </div>
+        </li>
+        <li class="self">
+            <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false" /></div>
+            <div class="msg">
+                <img src="https://i.imgur.com/QAROObc.jpg" draggable="false" />
+                <time>20:19</time>
+            </div>
+        </li>
+        <li class="other">
+            <div class="avatar"><img src="./resources/images/me.jpg" draggable="false" /></div>
+            <div class="msg">
+                <p>Gracias!
+                    <emoji class="hearth_blue" />
+                </p>
+                <time>20:20</time>
+            </div>
+        </li>
+        <div class="day">Hoy</div>
+        <li class="self">
+            <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false" /></div>
+            <div class="msg">
+                <p>Te apetece jugar a Minecraft?</p>
+                <time>18:03</time>
+            </div>
+        </li>
+        <li class="other">
+            <div class="avatar"><img src="./resources/images/me.jpg" draggable="false" /></div>
+            <div class="msg">
+                <p>Venga va, hace ya mucho que no juego...</p>
+                <time>18:07</time>
+            </div>
+        </li>
+        <li class="self">
+            <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false" /></div>
+            <div class="msg">
+                <p>Ehh, me crashea el Launcher...
+                    <emoji class="cryalot" />
+                </p>
+                <time>18:08</time>
+            </div>
+        </li>
+        <li class="other">
+            <div class="avatar"><img src="./resources/images/me.jpg" draggable="false" /></div>
+            <div class="msg">
+                <p>
+                    <emoji class="lmao" />
+                </p>
+                <time>18:08</time>
+            </div>
+        </li>
+        <li class="self">
+            <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false" /></div>
+            <div class="msg">
+                <p>Es broma</p>
+                <p>Ataque Moai!</p>
+                <p><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span></p>
+                <time>18:09</time>
+            </div>
+        </li>
+        <li class="other">
+            <div class="avatar"><img src="./resources/images/me.jpg" draggable="false" /></div>
+            <div class="msg">
+                <p>Copón</p>
+                <p>
+                    <emoji class="funny" />
+                </p>
+                <time>18:08</time>
+            </div>
+        </li>
+        <li class="self">
+            <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false" /></div>
+            <div class="msg">
+                <p>Hey there's a new update about this chat UI with more responsive elements! Check it now:</p>
+                <p><a href="https://codepen.io/Varo/pen/YPmwpQ" target="parent">Chat UI 2.0</a></p>
+                <time>18:09</time>
+            </div>
+        </li>
+    </ol>
+    <input class="textarea" type="text" placeholder="Type here!" />
+    <div class="emojis"></div>
+</body>
+
 </html>
