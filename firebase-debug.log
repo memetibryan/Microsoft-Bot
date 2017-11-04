@@ -1,0 +1,28 @@
+[debug] [2017-11-04T09:07:28.917Z] ----------------------------------------------------------------------
+[debug] [2017-11-04T09:07:28.920Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-11-04T09:07:28.920Z] CLI Version:   3.14.0
+[debug] [2017-11-04T09:07:28.920Z] Platform:      linux
+[debug] [2017-11-04T09:07:28.920Z] Node Version:  v9.0.0
+[debug] [2017-11-04T09:07:28.920Z] Time:          Sat Nov 04 2017 12:07:28 GMT+0300 (EAT)
+[debug] [2017-11-04T09:07:28.920Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-04T09:07:28.931Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-04T09:07:28.932Z] > authorizing via signed-in user
+[debug] [2017-11-04T09:07:28.934Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/tech-bot-1009e  
+ Sat Nov 04 2017 12:07:28 GMT+0300 (EAT)
+[debug] [2017-11-04T09:07:30.124Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-04T09:07:30.126Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/tech-bot-1009e/tokens  
+ Sat Nov 04 2017 12:07:30 GMT+0300 (EAT)
+[debug] [2017-11-04T09:07:31.141Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/memetibryan/Documents/Javascript/Bot'...
+[info] 
+[debug] [2017-11-04T09:07:31.149Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tech-bot-1009e  
+ Sat Nov 04 2017 12:07:31 GMT+0300 (EAT)
+[debug] [2017-11-04T09:07:32.597Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-04T09:07:32.598Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/367232255693/clients/_:getWebAppConfig  
+ Sat Nov 04 2017 12:07:32 GMT+0300 (EAT)
+[debug] [2017-11-04T09:07:33.179Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
