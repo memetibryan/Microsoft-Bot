@@ -1,34 +1,22 @@
-// var builder = require('botbuilder');
+var restify = require('restify');
+var builder = require('botbuilder');
 
-// var connector = new builder.ConsoleConnector().listen();
-// var bot = new builder.UniversalBot(connector, function (session) {
-//     session.send("You said: %s", session.message.text);
-// });
+// Setup Restify Server
+var server = restify.createServer();
+server.listen(process.env.port || process.env.PORT || 3978, function () {
+   console.log('%s listening to %s', server.name, server.url); 
+});
 
-var express = require('express')
-var bodyParser = require('body-parser')
-var recastai = require('recastai').default
+// Create chat connector for communicating with the Bot Framework Service
+var connector = new builder.ChatConnector({
+    appId: process.env.MICROSOFT_APP_ID,
+    appPassword: process.env.MICROSOFT_APP_PASSWORD
+});
 
+// Listen for messages from users 
+server.post('/api/messages', connector.listen());
 
-var connect = new recastai.connect('YOUR_REQUEST_TOKEN')
-
-var app = express()
-
-/* Server setup */
-app.set('port', 5000)
-app.use(bodyParser.json())
-app.post('/', function(req, res) {
-  connect.handleMessage(req, res, onMessage)
-})
-
-function onMessage (message) {
-  // Get the content of the message
-  var content = message.content
-
-  // Get the type of the message (text, picture,...)
-  var type = message.type
-
-  // Add a reply, and send it
-  message.addReply([{ type: 'text', content: 'Hello, world' }])
-  message.reply()
-}
+// Receive messages from the user and respond by echoing each message back (prefixed with 'You said:')
+var bot = new builder.UniversalBot(connector, function (session) {
+    session.send("You said: %s", session.message.text);
+});
