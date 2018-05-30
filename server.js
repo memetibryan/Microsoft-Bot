@@ -1,7 +1,7 @@
 var connect = require('connect');
 var serveStatic = require('serve-static');
 connect().use(serveStatic(__dirname)).listen(8080, function(){
-    console.log('Server running on 8080...');
+    console.log('Successful, Server running on 8080...');
 });
 
 //bot passcode tdnqA3@xmrJVXNJV7967(^_
