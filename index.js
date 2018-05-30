@@ -3,3 +3,9 @@ function sendText(){
       document.getElementById("messages").innerHTML = message;
       console.log(message);
     };
+
+function writeUserData(message) {
+  firebase.database().set({
+    sentmessage: message
+  });
+}

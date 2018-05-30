@@ -27,8 +27,6 @@
     messagingSenderId: "367232255693"
   };
   firebase.initializeApp(config);
-  // Get a reference to the database service
-  var database = firebase.database();
 </script>
 </header>
 
@@ -43,7 +41,7 @@
   <div class="form-group">
     <input type="text" class="form-control inputArea" id="message" placeholder="Message">
   </div>
-  <button type="submit">Send</button>
+  <button type="submit" onclick="writeUserData()">Send</button>
 </form>
   </div>
 
